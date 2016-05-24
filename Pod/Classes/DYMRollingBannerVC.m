@@ -83,7 +83,7 @@
     _infiniteScrollEnabled = YES;
     
     _bannerPool = [[DYMBannerPool alloc] initWithSize:10];
-    _pageControl = [[UIPageControl alloc] initWithFrame:CGRectZero];
+    _pageControl = [[SMPageControl alloc] initWithFrame:CGRectZero];
 }
 
 -(void)setRollingImages:(NSArray *)rollingImages {
@@ -120,10 +120,6 @@
     
     /// Layout PageConstrol
     _pageControl.translatesAutoresizingMaskIntoConstraints = NO;
-    id viewsDic = NSDictionaryOfVariableBindings(_pageControl);
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[_pageControl]|" options:0 metrics:nil views:viewsDic]];
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[_pageControl]|" options:0 metrics:nil views:viewsDic]];
-    
     if (_pageControlSetupBlock) {
         _pageControlSetupBlock(_pageControl);
     }

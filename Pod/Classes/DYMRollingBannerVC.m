@@ -35,7 +35,7 @@
     
     DYMBannerPool   *_bannerPool;
     
-    UIPageControl   *_pageControl;
+    SMPageControl   *_pageControl;
 }
 
 /// handler block for banner tapping
@@ -43,6 +43,9 @@
 
 /// image loading block
 @property (nonatomic, copy)     DYMBannerRemoteImageLoadingBlock    remoteImageLoadingBlock;
+
+// page control setup block
+@property (nonatomic, copy)     DYMPageControlSetupBlock            pageControlSetupBlock;
 
 @end
 
@@ -80,7 +83,7 @@
     _infiniteScrollEnabled = YES;
     
     _bannerPool = [[DYMBannerPool alloc] initWithSize:10];
-    _pageControl = [[UIPageControl alloc] init];
+    _pageControl = [[UIPageControl alloc] initWithFrame:CGRectZero];
 }
 
 -(void)setRollingImages:(NSArray *)rollingImages {
@@ -121,6 +124,9 @@
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[_pageControl]|" options:0 metrics:nil views:viewsDic]];
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[_pageControl]|" options:0 metrics:nil views:viewsDic]];
     
+    if (_pageControlSetupBlock) {
+        _pageControlSetupBlock(_pageControl);
+    }
 }
 
 
@@ -181,6 +187,10 @@
 
 -(void)setRemoteImageLoadingBlock:(DYMBannerRemoteImageLoadingBlock)loadingBlock {
     _remoteImageLoadingBlock = loadingBlock;
+}
+
+-(void)setPageControlSetupBlock:(DYMPageControlSetupBlock)setupBlock {
+    _pageControlSetupBlock = setupBlock;
 }
 
 

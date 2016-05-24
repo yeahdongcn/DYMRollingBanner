@@ -26,7 +26,10 @@
 
 
 #import <UIKit/UIKit.h>
+#import <SMPageControl.h>
 #import "DYMBannerVC.h"
+
+typedef void(^DYMPageControlSetupBlock)(SMPageControl *pageControl);
 
 /// The view controller which rolls a group of banner images
 @interface DYMRollingBannerVC : UIPageViewController
@@ -53,8 +56,11 @@
 /// Handler for banner tap event
 -(void)addBannerTapHandler:(DYMBannderTapHandler)handler;
 
-/// Handler for banner tap event
+/// Handler for image loading
 -(void)setRemoteImageLoadingBlock:(DYMBannerRemoteImageLoadingBlock)loadingBlock;
+
+/// Handler for page control setup
+-(void)setPageControlSetupBlock:(DYMPageControlSetupBlock)setupBlock;
 
 @end
 

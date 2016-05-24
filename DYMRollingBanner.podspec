@@ -38,5 +38,5 @@ s.resource_bundles = {
 # s.public_header_files = 'Pod/Classes/**/*.h'
 # s.frameworks = 'UIKit', 'MapKit'
 
-# s.dependency 'SDWebImage', '~> 3.7.3'
+s.dependency 'SMPageControl', '~> 1.2'
 end

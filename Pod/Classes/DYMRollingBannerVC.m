@@ -45,7 +45,7 @@
 @property (nonatomic, copy)     DYMBannerRemoteImageLoadingBlock    remoteImageLoadingBlock;
 
 // page control setup block
-@property (nonatomic, copy)     DYMPageControlSetupBlock            pageControlSetupBlock;
+@property (nonatomic, copy)     DYMPageControlSetupBlock    pageControlSetupBlock;
 
 @end
 

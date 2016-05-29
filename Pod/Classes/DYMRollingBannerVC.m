@@ -187,6 +187,10 @@
 
 -(void)setPageControlSetupBlock:(DYMPageControlSetupBlock)setupBlock {
     _pageControlSetupBlock = setupBlock;
+    
+    if (_pageControlSetupBlock) {
+        _pageControlSetupBlock(_pageControl);
+    }
 }
 
 

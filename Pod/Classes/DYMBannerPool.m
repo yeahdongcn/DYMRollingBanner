@@ -65,7 +65,7 @@ static const NSInteger  MIN_POOL_SIZE = 5;
     
     for (NSInteger i = 0; i < _poolSize; i++) {
         DYMBannerVC *vc = [DYMBannerVC new];
-        vc.view.backgroundColor = [UIColor colorWithWhite:0 alpha:0.98];
+        vc.view.backgroundColor = [UIColor whiteColor];
         [_banners addObject:vc];
     }
 }

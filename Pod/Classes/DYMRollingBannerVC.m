@@ -114,7 +114,7 @@
     self.dataSource = self;
     self.delegate = self;
     
-    self.view.backgroundColor = [UIColor colorWithWhite:0.98 alpha:1];
+    self.view.backgroundColor = [UIColor whiteColor];
     
     [self.view addSubview:_pageControl];
     

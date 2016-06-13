@@ -49,7 +49,7 @@ typedef void(^DYMPageControlSetupBlock)(SMPageControl *pageControl);
 /// If 'YES', the auto scrolling will scroll to the right, otherwise to the left; the default value is 'NO'
 @property (nonatomic, assign)                   BOOL                    isAutoScrollingBackward;
 
-/// Background color when it reveals the scrollview edge, default value is black
+/// Background color when it reveals the scrollview edge, default value is white
 @property (nonatomic, strong)                   UIColor                  *edgeBackgroundColor;
 
 /// Start rolling

@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
 s.name             = "DYMRollingBanner"
-s.version          = "2.1.5"
+s.version          = "2.1.7"
 s.summary          = "A buttery-smooth Infinite Banner Scrolling View Controller, supports both local and remote images and is 100% compatible with AutoLayout."
 
 # This description is used to generate tags and improve search results.
@@ -31,9 +31,9 @@ s.platform     = :ios, '7.0'
 s.requires_arc = true
 
 s.source_files = 'Pod/Classes/**/*'
-s.resource_bundles = {
-'DYMRollingBanner' => ['Pod/Assets/*.png']
-}
+# s.resource_bundles = {
+# 'DYMRollingBanner' => ['Pod/Assets/*.png']
+# }
 
 # s.public_header_files = 'Pod/Classes/**/*.h'
 # s.frameworks = 'UIKit', 'MapKit'
